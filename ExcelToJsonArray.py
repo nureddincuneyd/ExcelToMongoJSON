@@ -3,14 +3,12 @@ import json
 import sys
 
 def main(kaynak_excel_dosyasi, baslangic_sutunu, bitis_sutunu, cikis_dosyasi="output.json"):
-    # Excel dosyasını oku ve boş hücreleri boş string ile doldur
+    
     df = pd.read_excel(kaynak_excel_dosyasi, engine='openpyxl').fillna('')
 
-    # Sütunları indeks numaralarına çevir
     baslangic_index = ord(baslangic_sutunu.upper()) - ord('A')
     bitis_index = ord(bitis_sutunu.upper()) - ord('A')
     
-    # Sütunlar arasındaki verileri al
     data = []
     for index, row in df.iterrows():
         entry = {}
@@ -19,7 +17,7 @@ def main(kaynak_excel_dosyasi, baslangic_sutunu, bitis_sutunu, cikis_dosyasi="ou
             entry[column_name] = row[column_name]
         data.append(entry)
     
-    # JSON dosyasına yaz
+    
     with open(cikis_dosyasi, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
