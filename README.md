@@ -14,23 +14,21 @@ To install the required packages, you can use pip:
 
 ```bash
 pip install pandas openpyxl
+
 Usage
 To run the script, use the following command:
-
-```bash
 
 python main.py <source_excel_file> <start_column> <end_column> [output_file]
 <source_excel_file>: The path to the source Excel file.
 <start_column>: The starting column (e.g., A).
 <end_column>: The ending column (e.g., C).
 [output_file]: (Optional) The name of the output JSON file. If not provided, the default is output.json.
+
+
 Examples
-bash
-Kodu kopyala
+
 python main.py data.xlsx A C output.json
 This command will read the data from columns A to C in data.xlsx and write it to output.json.
-
-```bash
 
 python main.py data.xlsx A C
 This command will read the data from columns A to C in data.xlsx and write it to output.json (default name).
