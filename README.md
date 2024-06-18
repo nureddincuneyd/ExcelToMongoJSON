@@ -2,6 +2,8 @@
 
 This project is a Python script that converts specific columns from an Excel file into a JSON array. The script reads an Excel file, extracts data from specified columns, and writes the data to a JSON file.
 
+It allows you to easily convert your data from Excel to a JSON file and import it into your MongoDB database.
+
 ## Requirements
 
 - Python 3.x
